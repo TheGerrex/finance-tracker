@@ -7,7 +7,7 @@
       <div class="col-9">
         <div class="form-group row">
           <div class="col-sm-9 pe-0 ">
-            <%= text_field_tag :friend, params[:friend], placeholder: "Friends", autofocus: true, class: "form-control form-control-lg"%>
+            <%= text_field_tag :friend, params[:friend], placeholder: "Type a name or email to search", autofocus: true, class: "form-control form-control-lg"%>
           </div>
           <div class="col-sm-3 ps-0 ">
             <%= button_tag type: :submit, class: "btn btn-primary" do%>
@@ -19,6 +19,13 @@
     </div>
     
   <% end %>
+</div>
+
+<div class="row mb-3">
+  <div class="col-sm-9">
+    <div id="results">
+    </div>
+  </div>
 </div>
 
 <% if !@friends.empty?%>
